@@ -23,7 +23,7 @@ return {
           hl.git_branch_fg = "#b7bdf8"
           hl.git_added = "#a6da95"
           hl.git_changed = "#f5a97f"
-          hl.git_removed = "#f38ba8"
+          hl.git_removed = "#e64553"
           hl.blank_bg = get_hlgroup("Folded").fg
           hl.file_info_bg = get_hlgroup("Visual").bg
           hl.nav_icon_bg = get_hlgroup("String").fg
@@ -119,6 +119,7 @@ return {
         -- add a component to display LSP clients, disable showing LSP progress, and use the right separator
         status.component.lsp({
           lsp_progress = false,
+          hl = { fg = "#b4befe"},
           surround = { separator = "right" },
         }),
         -- NvChad has some nice icons to go along with information, so we can create a parent component to do this
