@@ -64,6 +64,12 @@ return {
         },
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
       },
+      rust_analyzer  = {
+        checkOnSave = {
+          allFeatures = true,
+          command = "clippy"
+        }
+      }
     },
     -- customize how language servers are attached
     handlers = {

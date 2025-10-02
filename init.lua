@@ -18,3 +18,5 @@ end
 require "lazy_setup"
 require "polish"
 vim.o.termguicolors = true
+
+vim.api.nvim_set_option("clipboard", "unnamedplus")
