@@ -108,4 +108,11 @@ return {
     lazy = true,
     event = "BufRead"
   },
+  {
+    "nvim-telescope/telescope-symbols.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      vim.keymap.set("n", "<leader>fs", "<cmd>Telescope symbols<cr>", { desc = "Telescope Symbols" })
+    end,
+  },
 }
