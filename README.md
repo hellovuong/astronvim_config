@@ -24,11 +24,22 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+git clone https://github.com/hellovuong/astronvim_config ~/.config/nvim
 ```
 
 #### Start Neovim
 
 ```shell
 nvim
+```
+## Clangd for ARM
+
+```shell
+apt-get install clangd jq
+mkdir -p ~/.local/share/nvim/mason/packages/clangd/mason-schemas
+cd ~/.local/share/nvim/mason/packages/clangd
+curl https://raw.githubusercontent.com/clangd/vscode-clangd/master/package.json \
+    | jq .contributes.configuration > mason-schemas/lsp.json
+echo '{"schema_version":"1.1","primary_source":{"type":"local"},"name":"clangd","links":{"share":{"mason-schemas/lsp/clangd.json":"mason-schemas/lsp.json"}}}' \
+    > mason-receipt.json
 ```
